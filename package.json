@@ -4,7 +4,7 @@
   "description": "Simplified api wrapper for 80legs api",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
@@ -18,12 +18,18 @@
   "dependencies": {
     "request": "2.36.*",
     "async": "~0.9.0",
-    "underscore": "~1.7.0"
+    "underscore": "~1.7.0",
+    "event-stream": "~3.1.7",
+    "JSONStream": "~0.9.0"
   },
   "author": "Edwin Cen",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Healtho/eightylegs/issues"
   },
-  "homepage": "https://github.com/Healtho/eightylegs"
+  "homepage": "https://github.com/Healtho/eightylegs",
+  "devDependencies": {
+    "mocha": "~1.21.4",
+    "chai": "~1.9.1"
+  }
 }

@@ -1,0 +1,4 @@
+.*
+*.json
+*.php
+*node_modules/*
