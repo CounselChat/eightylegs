@@ -52,3 +52,21 @@ var eightyLegs = require('eightylegs')('API_KEY')
 ## URL List
 <a name='createUrlList' />
 ### createUrlList(urlListName, urlList, callback)
+
+Create a url list that contains an array of website urls that you want to crawl
+
+__Arguments__
+* `urlListName` - The name of url list that you want to create.
+* `urlList` - An array consists of urls that you want to crawl
+* `callback(err, result)` - A callback which is fired when create process is finished, if something went wrong, `err` will not be `null` and will consists two properties `code` and `message` representing related error code and message, please refer to 80legs api doc to see detail.
+
+__Example__
+
+```javascript
+var eightyLegs = require('eightylegs')
+  , list       = [ 'www.google.com', 'www.facebook.com' ]
+  , name       = 'My first url list'
+eightyLegs.createUrlList(name, list, function(err, result) {
+  //If create successfully, result will be your url list name (My first url list)
+})
+```
