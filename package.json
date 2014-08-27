@@ -1,0 +1,27 @@
+{
+  "name": "eightylegs",
+  "version": "0.0.1",
+  "description": "Simplified api wrapper for 80legs api",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Healtho/eightylegs.git"
+  },
+  "keywords": [
+    "web",
+    "crawler",
+    "80legs"
+  ],
+  "dependencies": {
+    "request": "2.36.*"
+  },
+  "author": "Edwin Cen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Healtho/eightylegs/issues"
+  },
+  "homepage": "https://github.com/Healtho/eightylegs"
+}
