@@ -5,7 +5,7 @@ Simplified api wrapper for 80legs api
 
 ## Quick Example
 ```javascript
-var eightyLegs = require('eightylegs')
+var eightyLegs = require('eightylegs')('API_KEY')
   , list       = [ 'www.google.com', 'www.facebook.com' ]
   , name       = 'My first url list'
 eightyLegs.createUrlList(name, list, function(err, result) {
@@ -63,10 +63,67 @@ __Arguments__
 __Example__
 
 ```javascript
-var eightyLegs = require('eightylegs')
+var eightyLegs = require('eightylegs')('API_KEY')
   , list       = [ 'www.google.com', 'www.facebook.com' ]
   , name       = 'My first url list'
 eightyLegs.createUrlList(name, list, function(err, result) {
   //If create successfully, result will be your url list name (My first url list)
 })
 ```
+---------------------------------------
+<a name='getAllUrlLists' />
+### getAllUrlLists(callback)
+Get all url lists that you create
+
+__Arguments__
+* `callback(err, result)` - A callback which is fired when get process is finished, if something went wrong, `err` will not be `null` and will consists two properties `code` and `message` representing related error code and message, please refer to 80legs api doc to see detail.
+
+
+__Example__
+
+```javascript
+var eightyLegs = require('eightylegs')('API_KEY')
+eightyLegs.getAllUrlLists(function(err, result) {
+  //If get successfully, result will be your url lists (Formatted in array)
+})
+```
+---------------------------------------
+<a name='getUrlListByName' />
+### getUrlListByName(urlListName, callback)
+
+Get a url list that named `urlListName`
+
+__Arguments__
+* `urlListName` - The name of url list that you want to get.
+* `callback(err, result)` - A callback which is fired when get process is finished, if something went wrong, `err` will not be `null` and will consists two properties `code` and `message` representing related error code and message, please refer to 80legs api doc to see detail.
+
+__Example__
+
+```javascript
+var eightyLegs = require('eightylegs')('API_KEY')
+  , name       = 'My first url list'
+eightyLegs.getUrlListByName(name, function(err, result) {
+  //If get successfully, result will be your url list named 'My first url list'
+})
+```
+---------------------------------------
+<a name='deleteUrlList' />
+### deleteUrlList(urlListName, callback)
+
+Delete a url list that named `urlListName`
+
+__Arguments__
+* `urlListName` - The name of url list that you want to delete.
+* `callback(err, result)` - A callback which is fired when delete process is finished, if something went wrong, `err` will not be `null` and will consists two properties `code` and `message` representing related error code and message, please refer to 80legs api doc to see detail.
+
+
+__Example__
+
+```javascript
+var eightyLegs = require('eightylegs')('API_KEY')
+  , name       = 'My first url list'
+eightyLegs.deleteUrlList(name, function(err, result) {
+  //If delete succesfully, err will be null and result will be url list name (My first url list)
+})
+```
+---------------------------------------
