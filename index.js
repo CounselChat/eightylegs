@@ -2,6 +2,7 @@ module.exports = function(API_KEY) {
   var ROOT_URL    = 'https://' + API_KEY + '@api.80legs.com/v2/'
     , URLLIST_URL = ROOT_URL + 'urllists/'
     , CRAWL_URL   = ROOT_URL + 'crawls/'
+    , RESULT_URL  = ROOT_URL + 'results/'
     , urlList     = require('./lib/url_list')
     , crawl       = require('./lib/crawl')
     , ret         = {}
@@ -29,7 +30,7 @@ module.exports = function(API_KEY) {
     }
 
     ret.getResultByName = function(name, callback) {
-      crawl.get(name, CRAWL_URL, callback)
+      crawl.get(name, CRAWL_URL, RESULT_URL, callback)
     }
 
     return ret
