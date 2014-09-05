@@ -3,7 +3,7 @@ var expect = require('chai').expect
 describe('Create crawl test', function() {
   it('create crawl', function(done) {
     this.timeout(50000)
-    var crawler = require('../index')('zhilpfk73g3cscvui9fkhlsosi4rccwr')
+    var crawler = require('../index')('p0t3mvrofjvoqv6wnx7mdzymh3ugnaj8')
       , name    = new Date()
       , options = {
         urllist : 'crawl_state'
@@ -17,7 +17,7 @@ describe('Create crawl test', function() {
 
   it('create duplicated crawl', function(done) {
     this.timeout(50000)
-    var crawler = require('../index')('zhilpfk73g3cscvui9fkhlsosi4rccwr')
+    var crawler = require('../index')('p0t3mvrofjvoqv6wnx7mdzymh3ugnaj8')
       , name    = 'Test Crawler'
       , options = {
         urllist : 'crawl_state'
@@ -32,7 +32,7 @@ describe('Create crawl test', function() {
 describe('Get crawl result test', function() {
   it('get crawl', function(done) {
     this.timeout(50000)
-    var crawler = require('../index')('zhilpfk73g3cscvui9fkhlsosi4rccwr')
+    var crawler = require('../index')('p0t3mvrofjvoqv6wnx7mdzymh3ugnaj8')
       , name    = 'Test Crawler'
     crawler.getResultByName(name, function(err, result) {
       expect(err).to.be.null

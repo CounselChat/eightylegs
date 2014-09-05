@@ -3,7 +3,7 @@ var expect = require('chai').expect
 describe('Create url list test', function() {
   it('Create url list', function(done) {
     this.timeout(50000)
-    var crawler = require('../index')('zhilpfk73g3cscvui9fkhlsosi4rccwr')
+    var crawler = require('../index')('p0t3mvrofjvoqv6wnx7mdzymh3ugnaj8')
       , name    = new Date()
     crawler.createUrlList(name, [ 'www.baidu.com' ], function(err, result) {
       expect(result).to.equal(name)
@@ -13,7 +13,7 @@ describe('Create url list test', function() {
 
   it('Create duplicated url list', function(done) {
     this.timeout(50000)
-    var crawler = require('../index')('zhilpfk73g3cscvui9fkhlsosi4rccwr')
+    var crawler = require('../index')('p0t3mvrofjvoqv6wnx7mdzymh3ugnaj8')
       , name    = 'testCrawler99'
     crawler.createUrlList(name, [ 'www.baidu.com' ], function(err, result) {
       expect(err.code).to.equal(422)
@@ -26,7 +26,7 @@ describe('Create url list test', function() {
 describe('Get url list', function() {
   it('get all url list', function(done) {
     this.timeout(60000)
-    var crawler = require('../index')('zhilpfk73g3cscvui9fkhlsosi4rccwr')
+    var crawler = require('../index')('p0t3mvrofjvoqv6wnx7mdzymh3ugnaj8')
       , name    = new Date()
     crawler.getAllUrlLists(function(err, result) {
       expect(err).to.be.null
@@ -37,7 +37,7 @@ describe('Get url list', function() {
 
   it('get specific url', function(done) {
     this.timeout(50000)
-    var crawler = require('../index')('zhilpfk73g3cscvui9fkhlsosi4rccwr')
+    var crawler = require('../index')('p0t3mvrofjvoqv6wnx7mdzymh3ugnaj8')
       , name    = 'testCrawler99'
     crawler.getUrlListByName(name, function(err, result) {
       expect(err).to.be.null
