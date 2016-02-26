@@ -61,6 +61,15 @@ module.exports = function(API_KEY) {
       crawl.get(name, CRAWL_URL, RESULT_URL, callback)
     }
 
+    ret.viewAllCrawls = function(options, callback) {
+      if (!callback) {
+        crawl.getAll({}, CRAWL_URL, options);
+      }
+      else {
+        crawl.getAll(options, CRAWL_URL, callback);
+      }
+    }
+
     ret.handle = function(type, callback) {
       ret.listenter[type] = function(data) {
         callback(null,data)
